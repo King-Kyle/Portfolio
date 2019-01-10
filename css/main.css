@@ -683,10 +683,6 @@ ul.menu-left.collapse {
   }
 }
 
-.row {
-  text-align: center;
-}
-
 .works-sec {
   color: #515056;
   border-radius: 0;
@@ -694,129 +690,89 @@ ul.menu-left.collapse {
   background-color: #fff;
   margin: 100px 0 0 0;
 }
-.works-sec img {
+
+@media only screen and (max-width: 768px) {
+  .prjct-wrt-right {
+    font-size: 1.5em !important;
+    top: 9% !important;
+  }
+
+  .prjct-wrt-left {
+    font-size: 1.5em !important;
+    top: 9% !important;
+  }
+
+  .prjct-bg {
+    margin-top: 3em !important;
+    margin-bottom: 3em !important;
+  }
+
+  .img-prjct {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .img-prjct:hover {
+    border-radius: 0px !important;
+  }
+}
+/*** PROJECT BACKGROUND ***/
+.prjct-bg {
+  background: transparent;
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+/*** HOME PAGE PROJECT COVER ***/
+.img-prjct {
+  border-radius: 0px;
+  max-width: 100%;
+  height: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: table;
+  position: relative;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: animatebottom 3s;
+}
+
+.img-prjct:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transform: scale(0.92);
+  -ms-transform: scale(0.92);
+  transform: scale(0.92);
+}
+
+.prjct-wrt-right {
+  position: absolute;
+  right: 3%;
+  top: 9%;
+  font-size: 2.6em;
+  color: #161616;
+  font-weight: 700;
   max-width: 100%;
 }
 
-.snip {
-  font-family: "Open Sans", sans-serif;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0;
-  width: 100%;
-  color: #555;
-  font-size: 6px;
-}
-.snip * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.snip:before {
+.prjct-wrt-left {
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  top: 100%;
-  content: "";
-  background-color: #1C1B20;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-.snip img {
-  backface-visibility: hidden;
-}
-.snip figcaption {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.snip h5, .snip button {
-  margin: 0;
-  opacity: 0;
-  letter-spacing: 1px;
-}
-.snip button {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-transition-delay: 0.05s;
-  transition-delay: 0.05s;
-  margin-bottom: 5px;
-  font-family: "gligoth", sans-serif;
-}
-.snip button {
-  padding: 20px 40px;
-  background: none;
-  border: none;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 1rem;
-  color: #fff;
-  letter-spacing: 3px;
-  cursor: pointer;
-}
-.snip button:after, .snip button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border: 2px solid #515056;
-  transition: transform 0.2s;
-}
-.snip button:after {
-  transform: translate(3px, 3px);
-}
-.snip button:before {
-  transform: translate(-3px, -3px);
-}
-.snip button:hover:after, .snip button:hover:before {
-  transform: translate(0);
-}
-.snip h5 {
-  font-weight: normal;
-  padding: 3px 10px;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-.snip:hover:before {
-  top: 0px;
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-.snip:hover button, .snip:hover h5 {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-.snip:hover button {
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-.snip:hover h5 {
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+  left: 3%;
+  top: 9%;
+  font-size: 2.6em;
+  color: #161616;
+  font-weight: 700;
+  max-width: 100%;
 }
 
-/* -------------------------------------------------------------------
-* ## contact button
-* ------------------------------------------------------------------- */
+.prjct {
+  padding-right: 0;
+}
+
+/*** THE END HOME PAGE PROJECT COVER ***/
 /* ===================================================================
 * # skills styles
 *
