@@ -78,7 +78,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 a:hover {
   color: #555;
@@ -86,17 +86,7 @@ a:hover {
 
 a:link {
   text-decoration: none;
-  color: #000;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #000;
-}
-
-a:active {
-  text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 h1 {
@@ -119,7 +109,7 @@ p {
 }
 
 .wrapper {
-  background-color: #F3F4F5;
+  background-color: #1C1B20;
 }
 @media (min-width: 992px) {
   .wrapper {
@@ -140,7 +130,7 @@ p {
  * ## header logo
  * ------------------------------------------------------------------- */
 .header-logo {
-  background-color: black;
+  background-color: #1C1B20;
   justify-content: center;
   align-items: center;
   padding: 0;
@@ -149,7 +139,7 @@ p {
   display: flex;
 }
 .header-logo span {
-  color: white;
+  color: #F3F4F5;
   font-family: "raiderfont";
   line-height: 0.9em;
 }
@@ -208,7 +198,7 @@ header {
   left: 0;
   width: 100%;
   padding: 0.5rem 0em 0em 0em;
-  background: #F3F4F5;
+  background: #1C1B20;
   z-index: 3;
   will-change: transform;
   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
@@ -299,11 +289,12 @@ ul.menu-left.collapse {
   margin-bottom: 0px;
   height: calc(95vh);
   text-align: center;
-  background-color: #F3F4F5;
+  background-color: #302f34;
+  background-attachment: fixed;
 }
 
 .heading {
-  color: black;
+  color: #000;
   position: relative;
   top: 40%;
   max-height: 700px;
@@ -364,8 +355,13 @@ ul.menu-left.collapse {
 /* -------------------------------------------------------------------
  * ## socials
  * ------------------------------------------------------------------- */
+.socials {
+  display: none;
+}
+
 @media (min-width: 992px) {
   .socials {
+    display: block;
     position: absolute;
     top: 40%;
     left: 0;
@@ -550,59 +546,14 @@ ul.menu-left.collapse {
 }
 
 /* ===================================================================
- * # about styles
- *
- * ------------------------------------------------------------------- */
-.photo-me {
-  margin: 0;
-  position: relative;
-  height: 400px;
-  background-color: #333745;
-}
-.photo-me .heading1 {
-  margin-left: 0;
-  width: 80px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-}
-
-/* ===================================================================
  * # works styles
  *
  * ------------------------------------------------------------------- */
-.works-wrap {
-  text-align: center;
-  background-color: #fff;
-  margin: 0;
-}
-.works-wrap h2 {
-  background-color: #ffcd05;
-  font-family: "raiderfont";
-  font-size: 2.5em;
-  color: black;
-}
-@media (min-width: 576px) {
-  .works-wrap h2 {
-    width: 280px;
-  }
-}
-@media (min-width: 768px) {
-  .works-wrap {
-    padding: 0;
-  }
-  .works-wrap h2 {
-    font-size: 3em;
-  }
-}
-
 .works-sec {
   color: #515056;
   border-radius: 0;
   text-align: center;
-  background-color: #fff;
+  background-color: #1c1b20;
   margin: 100px 0 0 0;
 }
 
@@ -664,21 +615,25 @@ ul.menu-left.collapse {
 }
 
 .prjct-wrt-right {
+  background-color: #ffcd05;
   position: absolute;
   right: 3%;
   top: 9%;
+  font-family: "raiderfont";
   font-size: 2.6em;
-  color: #161616;
+  color: #000;
   font-weight: 700;
   max-width: 100%;
 }
 
 .prjct-wrt-left {
+  background-color: #ffcd05;
   position: absolute;
   left: 3%;
   top: 9%;
+  font-family: "raiderfont";
   font-size: 2.6em;
-  color: #161616;
+  color: #000;
   font-weight: 700;
   max-width: 100%;
 }
@@ -724,7 +679,7 @@ ul.menu-left.collapse {
  *
  * ------------------------------------------------------------------- */
 .footer-sec {
-  background-color: #fff;
+  background-color: #1c1b20;
   margin: 0;
 }
 
@@ -732,7 +687,7 @@ ul.menu-left.collapse {
   width: 100%;
   position: relative;
   height: auto;
-  background-color: #fff;
+  background-color: #1c1b20;
 }
 
 .footer .col {
