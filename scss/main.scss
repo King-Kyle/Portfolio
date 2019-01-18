@@ -167,7 +167,7 @@
  }
 
  .wrapper {
-   background-color: #fff;
+   background-color: #F3F4F5;
    @include media-breakpoint-up(lg) {
      padding: 0 2em 2em 2em;
      padding-bottom: 0px;
@@ -175,7 +175,7 @@
  }
 
  #site-content {
-   background-color: #fff;
+   background-color: #F3F4F5;
  }
 
 /* ===================================================================
@@ -259,7 +259,7 @@
    left: 0;
    width: 100%;
    padding: .5rem 0em 0em 0em;
-   background: white;
+   background: #F3F4F5;
    z-index: 3;
    will-change: transform;
    transition: background .3s,
@@ -354,7 +354,7 @@
     margin-bottom: 0px;
     height: calc(95vh);
     text-align: center;
-    background-color: #fff;
+    background-color: #F3F4F5;
   }
 
   .heading {
@@ -647,60 +647,10 @@
      left: 0;
      right: 0;
      padding: 0;
-     h1 {
-       margin: 10px;
-       font-size: 2em;
-       color: #fff;
-     }
    }
  }
 
- .about {
-   background-color: #fff;
-   margin-left: 70px;
-   position: relative;
-   .heading2 {
-     text-align: right;
-     width: 200px;
-     position: absolute;
-     top: 0;
-     left: 0;
-     transform: rotate(-270deg);
-     transform-origin: (0 0);
-     p {
-       margin-top: 10px;
-     }
-     h1 {
-       color: #333745;
-       font-size: 4em;
-     }
-   }
- }
 
- .smallHeader {
-   font-family: 'Playfair Display', serif;
-   color: #000;
-   padding: 20px;
-   @include media-breakpoint-up(sm) {
-     margin: 0 50px 0 50px;
-   }
-   @include media-breakpoint-up(md) {
-     margin: 0 100px 0 100px;
-   }
- }
-
- .about-wrap {
-   .bold {
-     font-weight: 800;
-     font-family: 'Open Sans', sans-serif;
-   }
-   @include media-breakpoint-up(sm) {
-     margin: 0 50px 0 50px;
-   }
-   @include media-breakpoint-up(md) {
-     margin: 0 100px 0 100px;
-   }
- }
 
 /* ===================================================================
  * # works styles
@@ -726,34 +676,6 @@
      padding: 0;
      h2 {
        font-size: 3em;
-     }
-   }
- }
-
- .works-wrap-two {
-   background-color: #fff;
-   padding: 40px 40px 40px 40px;
-   position: relative;
-   text-align: center;
-   &:before,
-   &:after {
-     content: "";
-     display: inline-block;
-     height: 1px;
-     border-top: 2px solid #ffcd05;
-     position: relative;
-     vertical-align: middle;
-     width: 50%;
-     top: -2px;
-   }
-   p {
-     font-family: 'Playfair Display', serif;
-     font-size: 0.8rem;
-     color: #000;
-   }
-   @include media-breakpoint-up(md) {
-     p {
-       font-size: 1em;
      }
    }
  }
@@ -803,13 +725,14 @@
 .img-prjct {
   border-radius: 0px;
   max-width: 100%;
+  margin: 0;
   height: auto;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   -o-transition: all .5s ease;
    transition: all .5s ease;
-   display: table;
+
    position: relative;
    padding-left: 1em;
    padding-right: 1em;
@@ -826,8 +749,8 @@
 
 .prjct-wrt-right {
    position: absolute;
-   right:3%;
-   top:9%;
+   right: 3%;
+   top: 9%;
    font-size: 2.6em;
    color: #161616;
    font-weight: 700;
@@ -844,9 +767,7 @@
    max-width: 100%;
 }
 
-.prjct {
-  padding-right: 0;
-}
+
 /*** THE END HOME PAGE PROJECT COVER ***/
 
  /* ===================================================================
