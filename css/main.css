@@ -78,7 +78,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 a:hover {
   color: #555;
@@ -86,7 +86,7 @@ a:hover {
 
 a:link {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 h1 {
@@ -109,7 +109,7 @@ p {
 }
 
 .wrapper {
-  background-color: #1C1B20;
+  background-color: #EAEAEA;
 }
 @media (min-width: 992px) {
   .wrapper {
@@ -193,12 +193,12 @@ a:hover, a :focus {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 0.5rem 0em 0em 0em;
-  background: #1C1B20;
+  background: transparent;
   z-index: 3;
   will-change: transform;
   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
@@ -289,8 +289,12 @@ ul.menu-left.collapse {
   margin-bottom: 0px;
   height: calc(95vh);
   text-align: center;
-  background-color: #302f34;
-  background-attachment: fixed;
+  background-color: #EAEAEA;
+}
+@media (min-width: 992px) {
+  .home-sec {
+    height: calc(85vh);
+  }
 }
 
 .heading {
@@ -301,6 +305,11 @@ ul.menu-left.collapse {
   margin: 0px auto;
   text-align: center;
 }
+@media (min-width: 992px) {
+  .heading {
+    right: 20%;
+  }
+}
 .heading .color-block {
   z-index: -1;
   left: 25%;
@@ -308,7 +317,7 @@ ul.menu-left.collapse {
   position: absolute;
   width: 80px;
   height: 200px;
-  background-color: #ffcd05;
+  background-color: #E8BB05;
 }
 @media (min-width: 460px) {
   .heading .color-block {
@@ -365,6 +374,9 @@ ul.menu-left.collapse {
     position: absolute;
     top: 40%;
     left: 0;
+  }
+  .socials i {
+    margin-top: 2em;
   }
 
   .hovicon {
@@ -477,11 +489,13 @@ ul.menu-left.collapse {
  * ------------------------------------------------------------------- */
 .home-scroll {
   width: 0 auto;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0;
   right: 0;
   padding: 0;
+  margin-left: 0;
+  width: 50px;
 }
 @media (min-width: 576px) {
   .home-scroll {
@@ -546,6 +560,16 @@ ul.menu-left.collapse {
 }
 
 /* ===================================================================
+ * # about styles
+ *
+ * ------------------------------------------------------------------- */
+.about {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+/* ===================================================================
  * # works styles
  *
  * ------------------------------------------------------------------- */
@@ -553,8 +577,8 @@ ul.menu-left.collapse {
   color: #515056;
   border-radius: 0;
   text-align: center;
-  background-color: #1c1b20;
-  margin: 100px 0 0 0;
+  background-color: #EAEAEA;
+  padding: 0 0 0 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -615,7 +639,7 @@ ul.menu-left.collapse {
 }
 
 .prjct-wrt-right {
-  background-color: #ffcd05;
+  background-color: #E8BB05;
   position: absolute;
   right: 3%;
   top: 9%;
@@ -627,7 +651,7 @@ ul.menu-left.collapse {
 }
 
 .prjct-wrt-left {
-  background-color: #ffcd05;
+  background-color: #E8BB05;
   position: absolute;
   left: 3%;
   top: 9%;
@@ -720,7 +744,7 @@ ul.menu-left.collapse {
 }
 
 .footer .col ul li {
-  color: #999999;
+  color: #515056;
   font-size: 14px;
   font-family: inherit;
   font-weight: bold;

@@ -128,7 +128,7 @@
 
  a {
    text-decoration: none;
-   color: #fff;
+   color: #000;
    &:hover {
      color: #555;
    }
@@ -136,7 +136,7 @@
 
  a:link {
    text-decoration: none;
-   color: #fff;
+   color: #000;
  }
 
  h1 {
@@ -159,7 +159,7 @@
  }
 
  .wrapper {
-   background-color: #1C1B20;
+   background-color: #EAEAEA;
    @include media-breakpoint-up(lg) {
      padding: 0 2em 2em 2em;
      padding-bottom: 0px;
@@ -244,12 +244,12 @@
  }
 
  header {
-   position: fixed;
+   position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    padding: .5rem 0em 0em 0em;
-   background: #1C1B20;
+   background: transparent;
    z-index: 3;
    will-change: transform;
    transition: background .3s,
@@ -344,11 +344,10 @@
     margin-bottom: 0px;
     height: calc(95vh);
     text-align: center;
-
-    background-color: #302f34;
-
-
-    background-attachment: fixed;
+    background-color: #EAEAEA;
+    @include media-breakpoint-up(lg) {
+      height: calc(85vh);
+    }
   }
 
   .heading {
@@ -358,6 +357,9 @@
     max-height: 700px;
     margin: 0px auto;
     text-align: center;
+    @include media-breakpoint-up(lg) {
+      right: 20%;
+    }
     .color-block {
       z-index: -1;
       left: 25%;
@@ -365,7 +367,7 @@
       position: absolute;
       width: 80px;
       height: 200px;
-      background-color: #ffcd05;
+      background-color: #E8BB05;
       @media (min-width: 460px) {
         left: 30%;
         width: 100px;
@@ -419,6 +421,9 @@
        position: absolute;
        top: 40%;
        left: 0;
+       i {
+         margin-top: 2em;
+       }
      }
 
      .hovicon {
@@ -526,11 +531,13 @@
 
    .home-scroll {
      width: 0 auto;
-     position: absolute;
+     position: fixed;
      bottom: 0px;
      left: 0;
      right: 0;
      padding: 0;
+     margin-left: 0;
+     width: 50px;
      @include media-breakpoint-up(sm) {
        margin-left: 0;
        width: 50px;
@@ -629,6 +636,19 @@
 }
 
 /* ===================================================================
+ * # about styles
+ *
+ * ------------------------------------------------------------------- */
+
+.about {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+}
+
+
+
+/* ===================================================================
  * # works styles
  *
  * ------------------------------------------------------------------- */
@@ -637,8 +657,8 @@
    color: #515056;
    border-radius: 0;
    text-align: center;
-   background-color: #1c1b20;
-   margin: 100px 0 0 0;
+   background-color: #EAEAEA;
+   padding: 0 0 0 0;
  }
 
  @media only screen and (max-width: 768px) {
@@ -701,7 +721,7 @@
 }
 
 .prjct-wrt-right {
-  background-color: #ffcd05;
+  background-color: #E8BB05;
    position: absolute;
    right: 3%;
    top: 9%;
@@ -713,7 +733,7 @@
 }
 
 .prjct-wrt-left {
-  background-color: #ffcd05;
+  background-color: #E8BB05;
    position: absolute;
    left:3%;
    top:9%;
@@ -806,7 +826,7 @@
    padding: 0;
  }
  .footer .col ul li {
-   color: #999999;
+   color: #515056;
    font-size: 14px;
    font-family: inherit;
    font-weight: bold;

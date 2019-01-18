@@ -76,6 +76,21 @@
 
  });
 
+ /* ===================================================================
+  * # HIDE SCROLL AT FOOTER
+  *
+  * ------------------------------------------------------------------- */
+
+  jQuery(document).ready(function(){
+    jQuery(window).scroll(function() {
+      if (jQuery('body').height() <= (jQuery(window).height() + jQuery(window).scrollTop())) {
+        jQuery('.home-scroll').fadeOut("slow");
+      } else {
+        jQuery(".home-scroll").fadeIn("slow");
+      }
+    });
+  });
+
 
 /* ===================================================================
  * # HEADER PARALLAX
