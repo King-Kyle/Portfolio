@@ -1,47 +1,4 @@
-/* ===================================================================
- *  Omnichief v1.0 Main Stylesheet
- *  09-08-2018
- *  ------------------------------------------------------------------
- *  Index:
- *  # variables
- *  # Mixins
- *  # base style overrides
- *      ## links
- *  # typography & general theme styles
- *      ## Lists
- *      ## responsive video container
- *      ## floated image
- *      ## tables
- *      ## Spacing
- *      ## pace.js styles - minimal
- *  # preloader
- *  # forms
- *      ## style placeholder text
- *      ## change autocomplete styles in chrome
- *  # buttons
- *  # additional components
- *      ## alert box
- *      ## additional typo styles
- *      ## skillbars
- *  # reusable and common theme styles
- *      ## display headings
- *      ## section header
- *      ## slick slider
- *  # header styles
- *      ## header logo
- *      ## main navigation
- *      ## mobile menu toggle
- *  # home
- *      ## home content
- *      ## home social
- *      ## home animations
- *  # works
- *      ## bricks/masonry
- *  # footer
- *      ## footer main
- *      ## footer bottom
- *      ## go to top
- * =================================================================== */
+
 /* ===================================================================
  * # Imports
  *
@@ -128,15 +85,15 @@
 
  a {
    text-decoration: none;
-   color: #000;
+   color: #555;
    &:hover {
-     color: #555;
+     color: #000;
    }
  }
 
  a:link {
    text-decoration: none;
-   color: #000;
+   color: #555;
  }
 
  h1 {
@@ -149,6 +106,7 @@
 
  h3,h4 {
    font-family: 'Playfair Display', serif;
+   color: #000;
  }
 
  p {
@@ -187,7 +145,7 @@
    height: 70px;
    display: flex;
    span {
-     color: #F3F4F5;
+     color: #fff;
      font-family: 'raiderfont';
      line-height: 0.9em;
    }
@@ -351,7 +309,6 @@
   }
 
   .heading {
-    color: #000;
     position: relative;
     top: 40%;
     max-height: 700px;
@@ -389,6 +346,10 @@
     padding: 0.2em;
     padding-top: 0;
     padding-bottom: 0;
+    color: #E8BB05;
+    span {
+      color: #000;
+    }
   }
 
   .wave {
@@ -644,6 +605,20 @@
   position: absolute;
   top: 40%;
   right: 10%;
+  a {
+    color: #000;
+  }
+}
+
+.underline--magical {
+  background-image: linear-gradient(120deg, #E8BB05 0%, #FFD11B 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.4em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
 }
 
 
@@ -755,7 +730,7 @@
  .skills {
    border-radius: 0;
    text-align: center;
-   background-color: #1C1B20;
+   background-color: #EAEAEA;
    color: #515056;
    padding: 5rem 0px;
    .skills-list {
