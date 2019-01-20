@@ -149,12 +149,12 @@ a:hover, a :focus {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   padding: 0.5rem 0em 0em 0em;
-  background: transparent;
+  background: #fff;
   z-index: 3;
   will-change: transform;
   transition: background 0.3s, -webkit-transform 0.5s cubic-bezier(0.694, 0.048, 0.335, 1);
@@ -165,7 +165,7 @@ header {
 }
 @media (min-width: 992px) {
   header {
-    padding: 2em 2em 0em 2em;
+    padding: 0em 3em 0em 3em;
   }
 }
 header nav {
@@ -249,7 +249,7 @@ ul.menu-left.collapse {
 }
 @media (min-width: 992px) {
   .home-sec {
-    height: calc(85vh);
+    height: calc(95vh);
   }
 }
 
@@ -330,12 +330,14 @@ ul.menu-left.collapse {
 @media (min-width: 992px) {
   .socials {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 0;
+    z-index: 3;
+    width: 3em;
   }
   .socials i {
-    margin-top: 2em;
+    margin-top: 1em;
   }
 
   .hovicon {
@@ -551,7 +553,7 @@ ul.menu-left.collapse {
   color: #515056;
   border-radius: 0;
   text-align: center;
-  background-color: #EAEAEA;
+  background-color: #1c1b20;
   padding: 0 0 0 0;
 }
 

@@ -201,12 +201,12 @@
  }
 
  header {
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    padding: .5rem 0em 0em 0em;
-   background: transparent;
+   background: #fff;
    z-index: 3;
    will-change: transform;
    transition: background .3s,
@@ -217,7 +217,7 @@
    transform: translateY(0);
    -webkit-transform: translateY(0);
    @include media-breakpoint-up(lg) {
-     padding: 2em 2em 0em 2em;
+     padding: 0em 3em 0em 3em;
    }
    nav {
      margin: 0 auto;
@@ -303,7 +303,7 @@
     text-align: center;
     background-color: #F3F4F5;
     @include media-breakpoint-up(lg) {
-      height: calc(85vh);
+      height: calc(95vh);
     }
   }
 
@@ -378,11 +378,13 @@
    @include media-breakpoint-up(lg) {
      .socials {
        display: block;
-       position: absolute;
+       position: fixed;
        top: 40%;
        left: 0;
+       z-index: 3;
+       width: 3em;
        i {
-         margin-top: 2em;
+         margin-top: 1em;
        }
      }
 
@@ -632,7 +634,7 @@
    color: #515056;
    border-radius: 0;
    text-align: center;
-   background-color: #EAEAEA;
+   background-color: #1c1b20;
    padding: 0 0 0 0;
  }
 
