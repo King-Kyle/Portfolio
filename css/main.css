@@ -66,12 +66,11 @@ p {
 }
 
 .wrapper {
-  background-color: #EAEAEA;
+  background-color: #fff;
 }
 @media (min-width: 992px) {
   .wrapper {
-    padding: 0 2em 2em 2em;
-    padding-bottom: 0px;
+    padding: 3em 3em 0em 3em;
   }
 }
 
@@ -246,7 +245,7 @@ ul.menu-left.collapse {
   margin-bottom: 0px;
   height: calc(95vh);
   text-align: center;
-  background-color: #EAEAEA;
+  background-color: #F3F4F5;
 }
 @media (min-width: 992px) {
   .home-sec {
@@ -524,6 +523,7 @@ ul.menu-left.collapse {
  *
  * ------------------------------------------------------------------- */
 .about {
+  text-align: left;
   position: absolute;
   top: 40%;
   right: 10%;

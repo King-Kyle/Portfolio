@@ -117,10 +117,9 @@
  }
 
  .wrapper {
-   background-color: #EAEAEA;
+   background-color: #fff;
    @include media-breakpoint-up(lg) {
-     padding: 0 2em 2em 2em;
-     padding-bottom: 0px;
+     padding: 3em 3em 0em 3em;
    }
  }
 
@@ -302,7 +301,7 @@
     margin-bottom: 0px;
     height: calc(95vh);
     text-align: center;
-    background-color: #EAEAEA;
+    background-color: #F3F4F5;
     @include media-breakpoint-up(lg) {
       height: calc(85vh);
     }
@@ -602,6 +601,7 @@
  * ------------------------------------------------------------------- */
 
 .about {
+  text-align: left;
   position: absolute;
   top: 40%;
   right: 10%;
