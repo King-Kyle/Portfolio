@@ -21,7 +21,7 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navigation">
   <div class="wrapper" id="top">
     <!-- header
     ================================================== -->
@@ -33,10 +33,10 @@
             <span>KYLE<br />KING</span>
           </a>
           <ul class="menu-left">
-            <li><a class="smoothscroll navbar__link" href="#about">ABOUT.</a></li>
-            <li><a class="smoothscroll navbar__link" href="#works">WORKS.</a></li>
-            <li><a class="smoothscroll navbar__link" href="#skills">SKILLS.</a></li>
-            <li><a class="smoothscroll navbar__link" href="#contact">CONTACT.</a></li>
+            <li><a class="active smoothscroll" href="#home">HOME.</a></li>
+            <li><a class="smoothscroll" href="#works">WORKS.</a></li>
+            <li><a class="smoothscroll" href="#about">ABOUT.</a></li>
+            <li><a class="smoothscroll" href="#skills">SKILLS.</a></li>
           </ul>
         </nav>
       </div> <!-- end header-div -->
@@ -45,7 +45,7 @@
 
     <!-- home
     ================================================== -->
-    <div id="home" class="jumbotron home-sec">
+    <div id="home" class="jumbotron home-sec section">
 
       <div class="socials">
         <i class="hovicon effect-4 fab fa-linkedin-in"></i>
@@ -61,7 +61,7 @@
         </svg>
       </div>
 
-      <div class="col-md-3 about">
+      <div class="col-md-3 home-about">
         <h2>
           I'm <a class="smoothscroll" href="#contact"><span class="underline--magical">Kyle King</span></a>
         </h2>
@@ -71,9 +71,17 @@
           appetite for knowledge and a curiosity
           for code.
         </p>
+
         <h5>
-          <a class="smoothscroll" href="#contact">Say Hi!</a>
+          <a class="link smoothscroll" href="#contact">Say Hi!
+            <svg class="underline">
+              <path class="underline--path" d="">
+                <animate class="underline--animation" attributeName="d" dur="0.3s" begin="indefinite" fill="freeze"></animate>
+              </path>
+            </svg>
+          </a>
         </h5>
+        
       </div>
 
       <div class="container home-scroll">
@@ -87,7 +95,7 @@
     <!-- works
     ================================================== -->
     <div id="site-content">
-      <div  id="works" class="works-sec">
+      <div  id="works" class="works-sec section">
 
         <!--- HOME PROJECTS --->
         <div class="container">
@@ -132,10 +140,21 @@
       </div> <!-- end works-sec -->
     </div> <!-- end site-content -->
 
+    <!-- about
+    ================================================== -->
+
+    <section id="about" class="jumbotron about section">
+      <p>I AM CONSTANTLY WORKING TO IMPROVE MYSELF IN THE LATEST TECH AND<br />
+         DESIGN TRENDS. THROUGHOUT MY LEARNING JOURNEY I'VE COME INTO CONTACT<br />
+         WITH AND I'M CURRENTLY COMFORTABLE WITH SOME OF THESE TECHNOLOGIES.</p>
+
+
+    </section> <!-- end about-sec -->
+
     <!-- skills
     ================================================== -->
 
-    <section id="skills" class="jumbotron skills">
+    <section id="skills" class="jumbotron skills section">
       <p>I AM CONSTANTLY WORKING TO IMPROVE MYSELF IN THE LATEST TECH AND<br />
          DESIGN TRENDS. THROUGHOUT MY LEARNING JOURNEY I'VE COME INTO CONTACT<br />
          WITH AND I'M CURRENTLY COMFORTABLE WITH SOME OF THESE TECHNOLOGIES.</p>
@@ -157,6 +176,17 @@
         </div>
       </div>
     </section> <!-- end skills-sec -->
+
+    <!-- contact
+    ================================================== -->
+
+    <section id="contact" class="jumbotron contact section">
+      <p>I AM CONSTANTLY WORKING TO IMPROVE MYSELF IN THE LATEST TECH AND<br />
+         DESIGN TRENDS. THROUGHOUT MY LEARNING JOURNEY I'VE COME INTO CONTACT<br />
+         WITH AND I'M CURRENTLY COMFORTABLE WITH SOME OF THESE TECHNOLOGIES.</p>
+
+
+    </section> <!-- end contact-sec -->
 
 
     <!-- footer

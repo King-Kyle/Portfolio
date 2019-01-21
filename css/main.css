@@ -26,6 +26,7 @@ body {
   line-height: 1.6;
   color: #fff;
   background-color: #f4f4f4;
+  position: relative;
 }
 
 a {
@@ -203,32 +204,23 @@ header nav ul li a {
   padding: 15px 0 15px 0;
 }
 
-.hide-nav {
-  transform: translateY(-120% !important);
-  -webkit-transform: translateY(-120%) !important;
+.active {
+  color: #01A7B7;
 }
 
-ul.menu-left {
-  display: block;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  z-index: 10;
-  display: block !important;
-  float: right;
-  max-height: none;
+.char {
+  display: inline-block;
+  position: relative;
 }
-ul.menu-left:before {
-  content: "";
-  display: table;
-  clear: both;
-}
-ul.menu-left.collapse {
-  max-height: 15em !important;
+
+.char::before {
+  content: ".";
+  display: inline-block;
+  position: absolute;
+  top: -1.2em;
+  left: 0;
+  text-align: center;
+  width: 100%;
 }
 
 /* ===================================================================
@@ -322,16 +314,16 @@ ul.menu-left.collapse {
   }
 }
 /* ===================================================================
- * # about styles
+ * # home-about styles
  *
  * ------------------------------------------------------------------- */
-.about {
+.home-about {
   text-align: left;
   position: absolute;
   top: 35%;
   right: 10%;
 }
-.about a {
+.home-about a {
   color: #000;
   font-family: "Playfair Display", serif;
 }
@@ -345,6 +337,25 @@ ul.menu-left.collapse {
 }
 .underline--magical:hover {
   background-size: 100% 88%;
+}
+
+.link {
+  position: relative;
+  letter-spacing: 0.1em;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(30%) rotate(180deg);
+}
+.underline--path {
+  fill: transparent;
+  stroke: #343a40;
+  stroke-width: 2px;
 }
 
 /* -------------------------------------------------------------------
@@ -640,15 +651,23 @@ ul.menu-left.collapse {
   max-width: 100%;
 }
 
-/*** THE END HOME PAGE PROJECT COVER ***/
+/* ===================================================================
+* # about styles
+*
+* ------------------------------------------------------------------- */
+.about {
+  background-color: #F3F4F5;
+}
+
 /* ===================================================================
 * # skills styles
 *
 * ------------------------------------------------------------------- */
 .skills {
+  margin: 0;
   border-radius: 0;
   text-align: center;
-  background-color: #EAEAEA;
+  background-color: #1c1b20;
   color: #515056;
   padding: 5rem 0px;
 }

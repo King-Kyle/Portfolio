@@ -3,56 +3,37 @@
  * # MENU SCROLL SPY
  *
  * ------------------------------------------------------------------- */
+ 
 
- $(document).ready(function(){
-     var sections = [];
-     var scrolled_id = false;
-     var id = false;
-     var $navbar = $('.navbar');
-     var $navbar__links = $navbar.find('.navbar__link');
+ (function() {
+   'use strict';
 
-     $navbar__links.each(function(){
-         sections.push($($(this).attr('href')));
-     });
+   var section = document.querySelectorAll(".section");
+   var sections = {};
+   var i = 0;
 
-     $navbar__links.click(function(e){
-         e.preventDefault();
+   Array.prototype.forEach.call(section, function(e) {
+     sections[e.id] = e.offsetTop;
+   });
 
-         $('html, body').animate({
-             scrollTop: $($(this).attr('href')).offset().top - 60
-         });
-     });
+   window.onscroll = function() {
+     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-     $(window).scroll(function(e){
-         e.preventDefault();
-         var scrollTop = $(this).scrollTop() + ($(window).height() / 3);
-
-
-         for(var i in sections){
-             var section = sections[i];
-
-             if(scrollTop > section.offset().top){
-                 scrolled_id = section.attr('id');
-             }
-
-             if(scrolled_id !== id){
-                 id = scrolled_id;
-
-                 $navbar__links.removeClass('navbar__link--current');
-
-                 $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current');
-             }
-         }
-     });
-
-     $(window).trigger('scroll');
- });
+     for (i in sections) {
+       if (sections[i] <= scrollPosition) {
+         document.querySelector('.active').setAttribute('class', ' ');
+         document.querySelector('a[href*=' + i + ']').setAttribute('class', 'active');
+       }
+     }
+   };
+ })();
 
 
 /* ===================================================================
  * # SMOOTH SCROLL
  *
  * ------------------------------------------------------------------- */
+
 
  jQuery(document).ready(function($) {
 
@@ -76,6 +57,7 @@
   *
   * ------------------------------------------------------------------- */
 
+
   jQuery(document).ready(function(){
     jQuery(window).scroll(function() {
       if (jQuery('body').height() <= (jQuery(window).height() + jQuery(window).scrollTop())) {
@@ -88,6 +70,33 @@
 
 
 /* ===================================================================
- * # SKILLS LOGO ANIMATIONS
+ * # LINK UNDERLINE ZIG-ZAG
  *
  * ------------------------------------------------------------------- */
+
+
+var width = $('.underline').width();
+
+var steps = 8;
+var height = 6;
+var step_size = width/steps;
+
+var d_animated = ['M0', '1'];
+var d_normal = ['M0', '1'];
+
+for (var i=1; i<=steps; i++) {
+  d_normal.push(step_size*(-0.5 + i), 1, step_size*i, 1);
+  d_animated.push(step_size*(-0.5 + i), height, step_size*i, 1);
+}
+
+$(document).ready(function() {
+  $('.underline--path').attr('d', d_normal.join(' '));
+
+  $('.link').hover(function() {
+    $('.underline--animation').attr({from: d_normal.join(' '), to: d_animated.join(' ')})
+  	$('.underline--animation')[0].beginElement();
+  }, function() {
+    $('.underline--animation').attr({to: d_normal.join(' '), from: d_animated.join(' ')})
+  	$('.underline--animation')[0].beginElement();
+  });
+});
