@@ -272,7 +272,7 @@ ul.menu-left.collapse {
   position: absolute;
   width: 80px;
   height: 200px;
-  background-color: #E8BB05;
+  background-color: #A54314;
 }
 @media (min-width: 460px) {
   .heading .color-block {
@@ -299,7 +299,7 @@ ul.menu-left.collapse {
   padding: 0.2em;
   padding-top: 0;
   padding-bottom: 0;
-  color: #E8BB05;
+  color: #A54314;
 }
 .heading-text span {
   color: #000;
@@ -337,7 +337,7 @@ ul.menu-left.collapse {
     width: 3em;
   }
   .socials i {
-    margin-top: 1em;
+    margin: 1em;
   }
 
   .hovicon {
@@ -527,7 +527,7 @@ ul.menu-left.collapse {
 .about {
   text-align: left;
   position: absolute;
-  top: 40%;
+  top: 35%;
   right: 10%;
 }
 .about a {
@@ -656,6 +656,9 @@ ul.menu-left.collapse {
 .skills .skills-list i {
   font-size: 2em;
   margin: 10px;
+}
+.skills .skills-list i:hover {
+  color: #01A7B7;
 }
 @media (min-width: 576px) {
   .skills .skills-list i {
