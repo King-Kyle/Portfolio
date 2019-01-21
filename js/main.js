@@ -1,58 +1,53 @@
 
 /* ===================================================================
- * # MENU BUTTON
+ * # MENU SCROLL SPY
  *
  * ------------------------------------------------------------------- */
 
+ $(document).ready(function(){
+     var sections = [];
+     var scrolled_id = false;
+     var id = false;
+     var $navbar = $('.navbar');
+     var $navbar__links = $navbar.find('.navbar__link');
+
+     $navbar__links.each(function(){
+         sections.push($($(this).attr('href')));
+     });
+
+     $navbar__links.click(function(e){
+         e.preventDefault();
+
+         $('html, body').animate({
+             scrollTop: $($(this).attr('href')).offset().top - 60
+         });
+     });
+
+     $(window).scroll(function(e){
+         e.preventDefault();
+         var scrollTop = $(this).scrollTop() + ($(window).height() / 3);
 
 
-/* ===================================================================
- * # MENU UI
- *
- * ------------------------------------------------------------------- */
+         for(var i in sections){
+             var section = sections[i];
 
- // SHOW/HIDE NAV
+             if(scrollTop > section.offset().top){
+                 scrolled_id = section.attr('id');
+             }
 
- // Hide Header on on scroll down
- var didScroll;
- var lastScrollTop = 0;
- var delta = 5;
- var navbarHeight = $('header').outerHeight();
+             if(scrolled_id !== id){
+                 id = scrolled_id;
 
- $(window).scroll(function(event){
-     didScroll = true;
+                 $navbar__links.removeClass('navbar__link--current');
+
+                 $('a[href="#'+ id + '"]', $navbar).addClass('navbar__link--current');
+             }
+         }
+     });
+
+     $(window).trigger('scroll');
  });
 
- setInterval(function() {
-     if (didScroll) {
-         hasScrolled();
-         didScroll = false;
-     }
- }, 250);
-
- function hasScrolled() {
-     var st = $(this).scrollTop();
-
-     // Make sure they scroll more than delta
-     if(Math.abs(lastScrollTop - st) <= delta)
-         return;
-
-     // If they scrolled down and are past the navbar, add class .nav-up.
-     // This is necessary so you never see what is "behind" the navbar.
-     if (st > lastScrollTop && st > navbarHeight){
-         // Scroll Down
-         $('header').removeClass('show-nav').addClass('hide-nav');
-         $('.nav-toggle').removeClass('open');
-         $('.menu-left').removeClass('collapse');
-     } else {
-         // Scroll Up
-         if(st + $(window).height() < $(document).height()) {
-             $('header').removeClass('hide-nav').addClass('show-nav');
-         }
-     }
-
-     lastScrollTop = st;
- }
 
 /* ===================================================================
  * # SMOOTH SCROLL
@@ -93,6 +88,6 @@
 
 
 /* ===================================================================
- * # HEADER PARALLAX
+ * # SKILLS LOGO ANIMATIONS
  *
  * ------------------------------------------------------------------- */

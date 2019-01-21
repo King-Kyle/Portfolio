@@ -30,7 +30,6 @@
      border: 0;
      overflow-x: hidden;
      transition: color 0.5s ease;
-
      &:after{
        content:'';
        position: absolute;
@@ -64,11 +63,6 @@
  * ------------------------------------------------------------------- */
 
  @font-face {
-     font-family: "gligoth";
-     src: url(fonts/gligoth.ttf);
- }
-
- @font-face {
      font-family: "raiderfont";
      src: url(fonts/raiderfont.ttf);
  }
@@ -85,7 +79,7 @@
 
  a {
    text-decoration: none;
-   color: #555;
+   color: #1C1B20;
    &:hover {
      color: #000;
    }
@@ -93,7 +87,7 @@
 
  a:link {
    text-decoration: none;
-   color: #555;
+   color: #000;
  }
 
  h1 {
@@ -101,12 +95,14 @@
  }
 
  h2 {
-   font-family: 'Playfair Display', serif;
+   font-family: 'raiderfont';
+   color: #1C1B20;
+   margin-bottom: 1em;
  }
 
- h3,h4 {
+ h3,h4,h5 {
    font-family: 'Playfair Display', serif;
-   color: #000;
+   color: #1C1B20;
  }
 
  p {
@@ -135,15 +131,17 @@
 /* -------------------------------------------------------------------
  * ## header logo
  * ------------------------------------------------------------------- */
+
  .header-logo {
    background-color: #1C1B20;
    justify-content: center;
    align-items: center;
    padding: 0;
-   width: 70px;
-   height: 70px;
+   width: 50px;
+   height: 50px;
    display: flex;
    span {
+     font-size: 0.85rem;
      color: #fff;
      font-family: 'raiderfont';
      line-height: 0.9em;
@@ -172,8 +170,8 @@
      display:block;
      position: absolute;
      left: 0;
-     bottom: 0;
-     height: 6px;
+     bottom: -15px;
+     height: 5px;
      width: 0;
      transition: width 0s ease, background .35s ease;
    }
@@ -182,8 +180,8 @@
      display: block;
      position: absolute;
      right: 0;
-     bottom: 0;
-     height: 3px;
+     bottom: -15px;
+     height: 5px;
      width: 0;
      background: #ffcd05;
      transition: width .35s ease;
@@ -231,11 +229,13 @@
      }
      ul {
        float: right;
-       font-family: 'gligoth', sans-serif;
-       font-weight: 600;
+       font-family: 'Open Sans', sans-serif;
+       font-weight: 800;
+       font-size: .65rem;
        list-style: none;
        padding-left: 0;
-       margin: 11.1px 0;
+       margin: 0;
+       height: 50px;
        li {
          margin: 0.5em;
          display: inline-block;
@@ -245,7 +245,7 @@
          }
          a {
            display: block;
-           padding: 2px;
+           padding: 15px 0 15px 0;
          }
        }
      }
@@ -364,6 +364,33 @@
     100% {
       stroke-dashoffset: -133;
       transform: translate3d(-90px, 0, 0);
+    }
+  }
+
+  /* ===================================================================
+   * # about styles
+   *
+   * ------------------------------------------------------------------- */
+
+  .about {
+    text-align: left;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+    a {
+      color: #000;
+      font-family: 'Playfair Display', serif;
+    }
+  }
+
+  .underline--magical {
+    background-image: linear-gradient(120deg, #E8BB05 0%, #FFD11B 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    &:hover {
+      background-size: 100% 88%;
     }
   }
 
@@ -597,33 +624,6 @@
 	}
 }
 
-/* ===================================================================
- * # about styles
- *
- * ------------------------------------------------------------------- */
-
-.about {
-  text-align: left;
-  position: absolute;
-  top: 35%;
-  right: 10%;
-  a {
-    color: #000;
-  }
-}
-
-.underline--magical {
-  background-image: linear-gradient(120deg, #E8BB05 0%, #FFD11B 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.4em;
-  background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
-  &:hover {
-    background-size: 100% 88%;
-  }
-}
-
-
 
 /* ===================================================================
  * # works styles
@@ -760,6 +760,7 @@
      }
    }
  }
+
 
 
 
