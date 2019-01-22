@@ -46,15 +46,16 @@ h1 {
   font-family: "raiderfont";
 }
 
-h2 {
+h2, h3, h4, h5 {
   font-family: "raiderfont";
   color: #1C1B20;
-  margin-bottom: 1em;
+  word-spacing: 0.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 1.5em;
 }
 
-h3, h4, h5 {
+span {
   font-family: "Playfair Display", serif;
-  color: #1C1B20;
 }
 
 p {
@@ -205,7 +206,7 @@ header nav ul li a {
 }
 
 .active {
-  color: #01A7B7;
+  color: #ffcd05;
 }
 
 .char {
@@ -265,7 +266,7 @@ header nav ul li a {
   position: absolute;
   width: 80px;
   height: 200px;
-  background-color: #A54314;
+  background-color: #E8BB05;
 }
 @media (min-width: 460px) {
   .heading .color-block {
@@ -292,9 +293,10 @@ header nav ul li a {
   padding: 0.2em;
   padding-top: 0;
   padding-bottom: 0;
-  color: #A54314;
+  color: #E8BB05;
 }
 .heading-text span {
+  font-family: "raiderfont";
   color: #000;
 }
 
@@ -320,7 +322,7 @@ header nav ul li a {
 .home-about {
   text-align: left;
   position: absolute;
-  top: 35%;
+  top: 30%;
   right: 10%;
 }
 .home-about a {
@@ -369,13 +371,13 @@ header nav ul li a {
   .socials {
     display: block;
     position: fixed;
-    top: 40%;
+    top: 35%;
     left: 0;
     z-index: 3;
     width: 3em;
   }
   .socials i {
-    margin: 1em;
+    margin: 2em 1em;
   }
 
   .hovicon {
@@ -484,7 +486,7 @@ header nav ul li a {
   }
 }
 /* -------------------------------------------------------------------
- * ## socroll
+ * ## scroll-arrow
  * ------------------------------------------------------------------- */
 .home-scroll {
   width: 0 auto;
@@ -567,7 +569,7 @@ header nav ul li a {
   border-radius: 0;
   text-align: center;
   background-color: #1c1b20;
-  padding: 0 0 0 0;
+  padding: 10em 0 0 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -651,12 +653,81 @@ header nav ul li a {
   max-width: 100%;
 }
 
+.leftInfo a {
+  color: #EAEAEA;
+}
+.leftInfo h5 {
+  margin: 10rem 0 3em 0;
+  color: #EAEAEA;
+}
+.leftInfo span {
+  color: #515056;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.leftInfo span:after {
+  content: "";
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+.leftInfo span:after {
+  margin: 0 0 0 20px;
+}
+
+.rightInfo a {
+  color: #EAEAEA;
+}
+.rightInfo h5 {
+  margin: 10rem 0 3em 0;
+  color: #EAEAEA;
+}
+.rightInfo span {
+  color: #515056;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.rightInfo span:before {
+  content: "";
+  border-top: 2px solid;
+  margin: 0 20px 0 0;
+  flex: 1 0 20px;
+}
+.rightInfo span:after {
+  margin: 0 0 0 20px;
+}
+
 /* ===================================================================
 * # about styles
 *
 * ------------------------------------------------------------------- */
 .about {
   background-color: #F3F4F5;
+  margin: 0;
+  padding-top: 10em;
+}
+.about .about-header {
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+.about-gif {
+  border: 5px solid #E8BB05;
+  margin-right: 50px;
+  height: calc(45vh);
+  background: linear-gradient(rgba(28, 27, 32, 0.7), rgba(28, 27, 32, 0.7)), url(https://media.giphy.com/media/pOZhmE42D1WrCWATLK/giphy.gif);
+  background-attachment: relative;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 /* ===================================================================
@@ -679,7 +750,7 @@ header nav ul li a {
   margin: 10px;
 }
 .skills .skills-list i:hover {
-  color: #01A7B7;
+  color: #ffcd05;
 }
 @media (min-width: 576px) {
   .skills .skills-list i {
@@ -703,7 +774,7 @@ header nav ul li a {
  *
  * ------------------------------------------------------------------- */
 .footer-sec {
-  background-color: #1c1b20;
+  background-color: #fff;
   margin: 0;
 }
 
@@ -711,7 +782,7 @@ header nav ul li a {
   width: 100%;
   position: relative;
   height: auto;
-  background-color: #1c1b20;
+  background-color: #fff;
 }
 
 .footer .col {
@@ -722,19 +793,6 @@ header nav ul li a {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding: 0px 20px 20px 20px;
-}
-
-.footer .col h1 {
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 17px;
-  padding: 20px 0px 5px 0px;
-  color: #000;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
 }
 
 .footer .col ul {
@@ -758,65 +816,6 @@ header nav ul li a {
 .social ul li {
   display: inline-block;
   padding-right: 5px !important;
-}
-
-.footer .col ul li:hover {
-  color: #000;
-  transition: 0.1s;
-  -webkit-transition: 0.1s;
-  -moz-transition: 0.1s;
-}
-
-.clearfix {
-  clear: both;
-}
-
-@media only screen and (min-width: 1280px) {
-  .contain {
-    width: 1200px;
-    margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 1139px) {
-  .contain .social {
-    width: 1000px;
-    display: block;
-  }
-
-  .social h1 {
-    margin: 0px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .footer .col {
-    width: 33%;
-  }
-
-  .footer .col h1 {
-    font-size: 14px;
-  }
-
-  .footer .col ul li {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .footer .col {
-    width: 50%;
-  }
-
-  .footer .col h1 {
-    font-size: 14px;
-  }
-
-  .footer .col ul li {
-    font-size: 13px;
-  }
-}
-@media only screen and (max-width: 340px) {
-  .footer .col {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */
